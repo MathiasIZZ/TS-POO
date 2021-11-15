@@ -5,6 +5,7 @@ import {Camion} from "./app/vehicule/camion/camion";
 import {MoteurDiesel} from "./app/moteur/moteurDiesel/moteurDiesel";
 import {MoteurElectrique} from "./app/moteur/moteurElectrique/moteurElectrique";
 import {Voiture} from "./app/vehicule/voiture/voiture";
+import {StationEssence} from "./app/stationEssence/stationEssence";
 
 
 let moteurEssence: MoteurEssence = new MoteurEssence(360, 25);
@@ -29,9 +30,15 @@ let moto1 : Moto = new Moto(
         15
     );
 
+    let stationEssence: StationEssence = new StationEssence(8, 11, "Paris");
+
     let voiture1: Voiture = new Voiture("Peugeot", "Noir", 45000, moteurElectrique, true, 5, "Zoe");
 
     moteurEssence.carburant();
     moto1.moteur;
+
+    moto1.faireLePleinDessence(stationEssence, 50);
+
+
 
 

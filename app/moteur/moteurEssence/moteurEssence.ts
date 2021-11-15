@@ -10,4 +10,6 @@ export class MoteurEssence extends Moteur {
     public carburant() {
         console.log("mhhh je bois de l'essence");
     }
+
+
 }

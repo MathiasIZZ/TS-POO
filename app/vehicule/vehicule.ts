@@ -1,4 +1,5 @@
 import { Moteur } from "../moteur/moteur";
+import {StationEssence} from "../stationEssence/stationEssence";
 
 export class Vehicule {
 
@@ -15,6 +16,11 @@ export class Vehicule {
         this._moteur = moteur;
     }
 
+    faireLePleinDessence(station: StationEssence, nbLitre: number) {
+        console.log(`Plein effectué avec de l'essence: vous avez pris: ${nbLitre} à la station de la ville de: ${station.ville}`);
+
+        console.log(`Total: ${nbLitre * station.prixEssence} `);
+    }
     get couleur(): string {
         return this._couleur;
     }
