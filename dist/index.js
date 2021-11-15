@@ -1,0 +1,16 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var moto_1 = require("./app/vehicule/moto/moto");
+var moteurEssence_1 = require("./app/moteur/moteurEssence/moteurEssence");
+var camion_1 = require("./app/vehicule/camion/camion");
+var moteurDiesel_1 = require("./app/moteur/moteurDiesel/moteurDiesel");
+var moteurElectrique_1 = require("./app/moteur/moteurElectrique/moteurElectrique");
+var voiture_1 = require("./app/vehicule/voiture/voiture");
+var moteurEssence = new moteurEssence_1.MoteurEssence(360, 25);
+var moteurDiesel = new moteurDiesel_1.MoteurDiesel(145, 35000);
+var moteurElectrique = new moteurElectrique_1.MoteurElectrique(190, 0);
+var moto1 = new moto_1.Moto("ducati", "rouge", 25000, moteurEssence, 6, 1200);
+var camion1 = new camion_1.Camion("Hymer", "Vert", 17000, moteurDiesel, false, 15);
+var voiture1 = new voiture_1.Voiture("Peugeot", "Noir", 45000, moteurElectrique, true, 5, "Zoe");
+moteurEssence.carburant();
+moto1.moteur;
